@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuenta Clara · Facturación para freelancers en Panamá</title>
+  <meta name="description" content="Crea facturas con ITBMS en segundos, envíalas por WhatsApp y cobra con Yappy o tarjeta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo"><span class="logo-marca" aria-hidden="true">C</span>Cuenta Clara</a>
+    <nav aria-label="Principal"><a href="#funciones">Funciones</a><a href="#precios">Precios</a><a href="#preguntas">Preguntas</a></nav>
+    <a href="#precios" class="btn btn-negro">Probar gratis</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="pegatina rosa">Hecho para Panamá</span>
+        <h1>Factura en <mark>30 segundos.</mark> Cobra en días, no en meses.</h1>
+        <p>Crea facturas con ITBMS calculado, envíalas por WhatsApp o correo y recibe el pago con Yappy, ACH o tarjeta. Sin hojas de cálculo, sin perseguir clientes.</p>
+        <div class="hero-cta">
+          <a href="#precios" class="btn btn-lima btn-grande">Empezar gratis →</a>
+          <span class="nota">Sin tarjeta · 14 días de prueba</span>
+        </div>
+      </div>
+
+      <div class="maqueta" aria-label="Vista previa de la aplicación" role="img">
+        <div class="ventana">
+          <div class="ventana-barra"><i></i><i></i><i></i><span>cuentaclara.app/facturas/nueva</span></div>
+          <div class="factura">
+            <div class="factura-cab">
+              <div><small>Factura</small><strong>#0042</strong></div>
+              <span class="estado" id="estado-factura">Borrador</span>
+            </div>
+            <div class="campo-falso"><small>Cliente</small><span class="escribe" data-texto="Estudio Mar, S.A."></span></div>
+            <div class="lineas">
+              <div class="linea"><span>Diseño de logotipo</span><span>$450.00</span></div>
+              <div class="linea"><span>Manual de marca</span><span>$300.00</span></div>
+              <div class="linea total"><span>ITBMS 7 %</span><span>$52.50</span></div>
+              <div class="linea gran-total"><span>Total</span><span>$802.50</span></div>
+            </div>
+            <button class="btn btn-negro btn-ancho" tabindex="-1" id="btn-enviar-falso">Enviar por WhatsApp</button>
+          </div>
+        </div>
+        <div class="tarjeta-flotante cobro"><span>💸</span><div><strong>+$802.50</strong><small>Pago recibido por Yappy</small></div></div>
+        <div class="tarjeta-flotante grafico">
+          <small>Cobrado este mes</small><strong>$6 940</strong>
+          <div class="barras"><i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:42%"></i><i style="--h:78%"></i><i style="--h:100%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinta" aria-hidden="true">
+      <div class="cinta-pista">
+        <span>ITBMS automático</span><span>★</span><span>Yappy y ACH</span><span>★</span><span>Recordatorios de pago</span><span>★</span><span>Reportes para tu contador</span><span>★</span>
+        <span>ITBMS automático</span><span>★</span><span>Yappy y ACH</span><span>★</span><span>Recordatorios de pago</span><span>★</span><span>Reportes para tu contador</span><span>★</span>
+      </div>
+    </section>
+
+    <section class="funciones" id="funciones">
+      <h2>Todo lo que necesitas para cobrar, <span class="subrayado">nada que sobre.</span></h2>
+      <div class="bento">
+        <article class="caja caja-itbms">
+          <h3>Calculadora de ITBMS</h3>
+          <p>Prueba cómo calculamos el impuesto en cada factura.</p>
+          <form class="calc" id="calc-itbms">
+            <label for="monto">Monto antes de impuesto</label>
+            <div class="entrada"><span>$</span><input id="monto" type="number" min="0" step="0.01" value="750" inputmode="decimal"></div>
+            <label class="exento"><input type="checkbox" id="exento"> Servicio exento</label>
+            <dl>
+              <div><dt>Subtotal</dt><dd id="r-sub">$750.00</dd></div>
+              <div><dt>ITBMS (7 %)</dt><dd id="r-itbms">$52.50</dd></div>
+              <div class="grande"><dt>Total a cobrar</dt><dd id="r-total">$802.50</dd></div>
+            </dl>
+          </form>
+        </article>
+        <article class="caja caja-lima"><span class="icono">⚡</span><h3>Plantillas en 1 clic</h3><p>Guarda tus servicios frecuentes y arma una factura en segundos.</p></article>
+        <article class="caja"><span class="icono">🔔</span><h3>Recordatorios automáticos</h3><p>Avisamos a tu cliente 3 días antes y el día del vencimiento. Tú no persigues a nadie.</p></article>
+        <article class="caja caja-rosa"><span class="icono">📲</span><h3>WhatsApp y correo</h3><p>Envía un enlace con botón de pago. Ves cuándo tu cliente abre la factura.</p></article>
+        <article class="caja caja-ancha">
+          <span class="icono">📊</span><h3>Reportes para tu contador</h3>
+          <p>Ingresos, ITBMS cobrado y facturas pendientes por mes, listos para exportar a Excel o PDF.</p>
+          <div class="mini-tabla" aria-hidden="true">
+            <div><span>Octubre</span><span>$5 210</span><span class="ok">Pagado</span></div>
+            <div><span>Noviembre</span><span>$6 940</span><span class="pend">2 pendientes</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pasos">
+      <h2>Así de simple</h2>
+      <ol>
+        <li><span>1</span><h3>Crea</h3><p>Elige cliente y servicios. El ITBMS y el total se calculan solos.</p></li>
+        <li><span>2</span><h3>Envía</h3><p>Comparte el enlace por WhatsApp o correo con tu marca y logo.</p></li>
+        <li><span>3</span><h3>Cobra</h3><p>Tu cliente paga con Yappy, ACH o tarjeta. La factura se marca como pagada.</p></li>
+      </ol>
+    </section>
+
+    <section class="ahorro">
+      <div>
+        <h2>¿Cuánto tiempo te devuelve?</h2>
+        <p>Mueve los controles con tus números reales.</p>
+      </div>
+      <form class="calc-ahorro" id="calc-ahorro">
+        <label>Facturas al mes <output id="o-facturas">12</output>
+          <input type="range" id="facturas" min="1" max="100" value="12"></label>
+        <label>Minutos por factura hoy <output id="o-minutos">25</output>
+          <input type="range" id="minutos" min="5" max="90" step="5" value="25"></label>
+        <label>Tu tarifa por hora <output id="o-tarifa">$30</output>
+          <input type="range" id="tarifa" min="5" max="150" step="5" value="30"></label>
+        <div class="resultado" aria-live="polite">
+          <div><strong id="r-horas">4.9 h</strong><span>ahorradas al mes</span></div>
+          <div><strong id="r-valor">$146</strong><span>de tu tiempo, cada mes</span></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="precios" id="precios">
+      <h2>Precios claros, <span class="subrayado">como tu cuenta.</span></h2>
+      <div class="interruptor" role="radiogroup" aria-label="Periodo de facturación">
+        <button role="radio" aria-checked="true" data-periodo="mensual">Mensual</button>
+        <button role="radio" aria-checked="false" data-periodo="anual">Anual <span class="pegatina mini">−20 %</span></button>
+      </div>
+      <div class="planes">
+        <article class="plan">
+          <h3>Gratis</h3><p class="precio"><span data-mensual="0" data-anual="0">$0</span><small>/ mes</small></p>
+          <p class="desc">Para empezar a ordenarte.</p>
+          <ul><li>5 facturas al mes</li><li>ITBMS automático</li><li>Envío por correo</li></ul>
+          <a href="#" class="btn btn-blanco btn-ancho">Crear cuenta</a>
+        </article>
+        <article class="plan plan-destacado">
+          <span class="pegatina rosa etiqueta-plan">Más elegido</span>
+          <h3>Freelancer</h3><p class="precio"><span data-mensual="9" data-anual="7.20">$9</span><small>/ mes</small></p>
+          <p class="desc">Para quien vive de sus clientes.</p>
+          <ul><li>Facturas ilimitadas</li><li>Cobro con Yappy, ACH y tarjeta</li><li>Recordatorios automáticos</li><li>Envío por WhatsApp</li></ul>
+          <a href="#" class="btn btn-lima btn-ancho">Probar 14 días</a>
+        </article>
+        <article class="plan">
+          <h3>Equipo</h3><p class="precio"><span data-mensual="24" data-anual="19.20">$24</span><small>/ mes</small></p>
+          <p class="desc">Para estudios y pymes de hasta 5 personas.</p>
+          <ul><li>Todo lo de Freelancer</li><li>5 usuarios con permisos</li><li>Reportes para contador</li><li>Soporte prioritario</li></ul>
+          <a href="#" class="btn btn-blanco btn-ancho">Hablar con ventas</a>
+        </article>
+      </div>
+      <p class="nota-precio" id="nota-precio">Precios en USD. ITBMS no incluido.</p>
+    </section>
+
+    <section class="opiniones">
+      <blockquote class="opinion"><p>“Antes tardaba una tarde entera en facturar a fin de mes. Ahora lo hago desde el celular entre reuniones.”</p><footer><b>Andrea M.</b> · Diseñadora, Ciudad de Panamá</footer></blockquote>
+      <blockquote class="opinion rosa"><p>“Los recordatorios automáticos me ahorraron las llamadas incómodas para cobrar.”</p><footer><b>Luis C.</b> · Fotógrafo, David</footer></blockquote>
+      <blockquote class="opinion lima"><p>“Mi contador recibe el reporte del mes y ya no me pide nada más.”</p><footer><b>Karina T.</b> · Consultora, Colón</footer></blockquote>
+    </section>
+
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cuenta Clara calcula el ITBMS por mí?</summary><p>Sí. Cada servicio se marca como gravado (7 %) o exento, y la factura muestra el subtotal, el impuesto y el total por separado.</p></details>
+      <details><summary>¿Cómo me paga mi cliente?</summary><p>La factura incluye un botón de pago con Yappy, transferencia ACH o tarjeta. Cuando se acredita el pago, la factura se marca como pagada automáticamente.</p></details>
+      <details><summary>¿Puedo cancelar cuando quiera?</summary><p>Sí, sin penalidad. Si cancelas, conservas acceso de lectura a tus facturas y puedes exportarlas.</p></details>
+      <details><summary>¿Sirve si no tengo empresa registrada?</summary><p>Sí. Puedes facturar como persona natural con tu cédula y RUC.</p></details>
+    </section>
+
+    <section class="cta-final">
+      <h2>Tu próxima factura puede salir hoy.</h2>
+      <a href="#precios" class="btn btn-lima btn-grande">Empezar gratis →</a>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <span class="logo"><span class="logo-marca" aria-hidden="true">C</span>Cuenta Clara</span>
+    <p>Producto ficticio creado como proyecto de diseño web por <a href="https://fp-507.github.io/Portafolio/">Fidel Pizart</a>. Testimonios, precios y cifras de ejemplo.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
