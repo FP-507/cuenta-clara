@@ -4,6 +4,10 @@ Landing page para **Cuenta Clara**, un producto ficticio de facturación para fr
 
 **[Ver el sitio en vivo →](https://fp-507.github.io/cuenta-clara/)**
 
+![Cuenta Clara: maqueta animada de una factura, calculadora de ITBMS y precios mensual o anual](media/demo.gif)
+
+*La maqueta animada del hero, la calculadora de ITBMS y el cambio de precios mensual/anual.*
+
 ## Dirección de arte
 
 - **Estilo neo-brutalista**: bordes negros de 3 px, sombras desplazadas sin desenfoque, botones que "se hunden" al presionarlos y elementos levemente rotados como pegatinas.
